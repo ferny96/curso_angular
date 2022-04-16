@@ -1,0 +1,41 @@
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el common Module.
+    </p>
+</div>
+
+<!-- {{ventasNetas | number:'1.2-2'}}, el 1 significa que quiero todo el numero entera
+y los.2-2 es que quiero que siempre aparezcan dos decimales -->
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Ventas Netas"
+                subheader="del presente ano">
+                <i class="pi pi-dollar"></i>
+                {{ventasNetas | number:'1.2-2'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <!-- NOTA: Currency nos sirve para ponerle la simbologia de moneda,
+        podemos poner la que deseamos es decir ponemos currency:'Lps.';
+        Ahora si deseamos la version corta podemos agregar un segundo argumento
+        como ser symbol-narrow, ejemplo: currency:'USD':'symbol-narrow';
+        Y si deseamos que solo imprima la parte entera y cierta cantidad de
+        decimales podemos hacerlo con: currency:'USD':'symbol-narrow':'1.0-4',
+        donde 1 significa que le estamos diciendo a Angular mostrame toda la
+        parte entera y .0-4 seran los decimales -->
+        <p-card header="Ventas Brutas"
+                subheader="del presente ano">
+                {{ventasNetas | currency:'USD':'symbol-narrow':'1.0-4'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <!-- NOTA: percent nos sirve para mostrar en formato de porcentaje, su
+        sintaxis es la siguiente:
+        percent:'parte_entera.decimanes'; -->
+        <p-card header="Ganancia porcentual"
+                subheader="del presente ano">
+                {{porcentaje | percent:'2.2-2'}}
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<h3>Agregar</h3>
+<hr>
+
+    <form (ngSubmit)="agregar()">
+        
+        <!-- NOTA: Con las llaves indicamos de que del lado de nuestro componente
+        hay algo que deseamos enlazar a este archivo: [value]="nuevo.nombre" -->
+        <input
+            type="text"
+            placeholder="Nombre"
+            name="nombre"
+            [(ngModel)]="nuevo.nombre"
+            >
+
+        <!-- Esta parte del codigo la reemplazamos del input
+            [value]="nuevo.nombre"
+            (input)="cambiarNombre( $event )"
+        
+            por [ngModel]="nuevo.nombre"
+            Para que funciones es necesario establecer name="nombre"
+            Para escuchar y emitir el evento debo de agregar ()
+            en: [(ngModel)]="nuevo.nombre" -->
+        
+        <input
+            type="number"
+            placeholder="Poder"
+            name = "poder"
+            [(ngModel)]="nuevo.poder"
+            >
+        
+        <button type="submit">
+            Agregar
+        </button>
+
+    </form>

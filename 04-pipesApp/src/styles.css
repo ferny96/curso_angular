@@ -1,0 +1,14 @@
+html, body {
+    margin: 10px;
+    /*Haciendo uso de las variables de entorno para el color de fondo que esta en:
+    node_modules/primeng/resources/themes/vela-blue/theme.css */
+    background-color: var(--surface-b);
+    /*Haciendo uso de las variables de entorno, en este caso del :root que esta en:
+    node_modules/primeng/resources/themes/vela-blue/theme.css busque el font-family*/
+    font-family: var( --font-family);
+}
+
+/*Color para el texto*/
+.text-layout {
+    color: var(--text-color);
+}

@@ -1,0 +1,17 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- NOTA: Aqui lo que esta dentro de los [] viene de personajes.component.ts y en los ""
+        viene del main-page-component.ts, ejemplo: [personaje]="personaje" 
+    
+        NOTA: Aqui quitamos: [personaje]="personaje" -->
+        <app-personajes></app-personajes>
+    </div>
+
+    <div class="col">
+        <!-- NOTA: Vamos a eliminar el evento: (onNuevoPersonaje)="agregarNuevoPersonaje($event)" -->
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+
+
+<mat-sidenav-container fullscreen>
+    <!-- NOTA: Para que haga el efecto de push hacemos uso de mode="push" -->
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar>
+            <span>Menu</span>
+        <span class="spacer"></span>
+            <button mat-icon-button
+                            (click)="sidenav.toggle()">
+                <mat-icon>
+                menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        
+        <mat-nav-list>
+            <a routerLink="./listado"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>label</mat-icon>
+                <span>Listado de Heroes</span>
+            </a>
+
+            <a routerLink="./agregar"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Anadir Heroe</span>
+            </a>
+
+            <a routerLink="./buscar"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar Heroe</span>
+            </a>
+
+        </mat-nav-list>
+        
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <!-- NOTA: Para que me aparezca la barra lateral debo de agregar el evento
+        click y hacer uso de sidenav.toggle() -->
+        <button mat-icon-button
+                        (click)="sidenav.toggle()">
+            <mat-icon>
+            menu</mat-icon>
+        </button>
+
+        <!-- NOTA: Esto lo hacemos para que quede en la derecha logaut y en la izquierda el menu -->
+        <span class="spacer"></span>
+
+        <button mat-button>
+            logout
+        </button>
+    </mat-toolbar>
+
+    <div class="contenedor">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>

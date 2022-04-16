@@ -1,0 +1,25 @@
+<!-- Para que este hello world se vea en el navegador debo de importar en el HTML principal
+app.component.html de la siguiente manera <app-heroe></app-heroe>-->
+<h1>{{nombre}}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{edad}}</dd>
+
+    <td>Funcion: </td>
+    <dd>{{obtenerNombre()}}</dd>
+
+    <td>Capitalizado: </td>
+    <dd>{{ nombreCapitalizado }}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+    Cambiar Heroe
+</button>
+
+<button (click)="cambiarEdad()">
+    Cambiar Edad
+</button>

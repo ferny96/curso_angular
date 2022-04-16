@@ -1,0 +1,16 @@
+<h2>Busquedas</h2>
+    <hr/>
+    <!-- Definimos [routerLinkActiveOptions]="{exact: true}" porque el primer link
+    tiene routerLink="" vacio, de lo contrario no seria necesario hacerlo -->
+    <ul class="list-group">
+        <li routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item">Buscar pais</li>
+        <li routerLink="region"
+        routerLinkActive="active"
+        class="list-group-item">Por region</li>
+        <li routerLink="capital"
+        routerLinkActive="active"
+        class="list-group-item">Por Capital</li>
+    </ul>

@@ -1,0 +1,7 @@
+<!-- Comentamos esto y haremos uso de otro componente para mostrar esto -->
+<h3>Personajes</h3>
+<hr>
+    <ul>
+        <!-- Con este codigo agregamos un nuevo heroe al listado, tambien haciendo uso de pipe '|' number -->
+        <li *ngFor="let Personajes of personaje">{{Personajes.nombre}} - {{Personajes.poder | number}} </li>
+    </ul>

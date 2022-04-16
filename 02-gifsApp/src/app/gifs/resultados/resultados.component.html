@@ -1,0 +1,24 @@
+<!-- <ul>
+    <li *ngFor="let gifMostrar of resultados">
+        {{gifMostrar.title}}
+    </li>
+</ul> -->
+
+<div class="row">
+    <div *ngFor="let gifMostrar of resultados"
+        class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        
+        <div class="card">
+            <!-- NOTA IMPORTANTE: ponemos al src con [] para que el src sea igual al valor del objeto -->
+            <img class="card-img-top"
+                [src]="gifMostrar.images.downsized_medium.url"
+                [alt]="gifMostrar.title">
+            <div class="card-body">
+                <p class="card-text">
+                    {{gifMostrar.title}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
